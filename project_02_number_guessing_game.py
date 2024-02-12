@@ -22,3 +22,18 @@ else:
 
 random_number = random.randrange(0, top_of_range)
 print(random_number)
+
+while True:
+    user_guess = input("Type a guess? ")
+    if user_guess.isdigit():
+        user_guess = int(user_guess)
+    
+    else:
+        print("Please, type a number next time!")
+        continue
+
+    if user_guess == random_number:
+        print("You got it.")
+        break
+    else:
+        print("You got it wrong.")
