@@ -21,9 +21,12 @@ else:
 #print(r)
 
 random_number = random.randrange(0, top_of_range)
-print(random_number)
+# print(random_number)
+
+guesses = 0
 
 while True:
+    guesses += 1
     user_guess = input("Type a guess? ")
     if user_guess.isdigit():
         user_guess = int(user_guess)
@@ -35,5 +38,9 @@ while True:
     if user_guess == random_number:
         print("You got it.")
         break
+    elif user_guess > random_number:
+        print("You were above the number!")
     else:
-        print("You got it wrong.")
+        print("You were below the number!")
+
+print("You got it correct in", guesses, "guesses!")
