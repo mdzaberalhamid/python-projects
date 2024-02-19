@@ -9,20 +9,33 @@ Which way would you like to go? ''').lower()
 print("----------")
 
 if answer == "left":
-    answer = input('''You come to a river, 
-you can walk around it 
-or you can swim across? 
-Type walk to walk around 
-or swim to swim across: ''').lower()
+    answer = input("You come to a river, you can walk around it or you can swim across? Type walk to walk around or swim to swim across: ").lower()
 
     if answer == "walk":
-        print("Walking...")
+        print("You walked for many miles, run out of water and you lost the game.")
     elif answer == "swim":
-        print("Swimming...")
+        print("You swam across and were eaten by an aligator.")
     else:
         print("Not a valid option, you lost.")
 
 elif answer == "right":
-    print("You chosed to go right")
+    answer = input("You come to a bridge, it looks like rusty. Do you want to cross it or head back (cross/back)? ")
+
+    if answer == "back":
+        print("You go back and lose the game eventually because you can't survive after choosing to go left.")
+    elif answer == "cross":
+        print("----------")
+        answer = input("You crossed the bridge and met a stranger. Do you want to talk (yes/no)? ")
+
+        if answer == "yes":
+            print("...")
+        elif answer == "no":
+            print("...")
+        else:
+            print("...")
+
+    else:
+        print("Not a valid option, you lost.")
+    
 else:
     print("Not a valid option, you lost.")
