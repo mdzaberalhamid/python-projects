@@ -27,10 +27,11 @@ elif answer == "right":
         print("----------")
         answer = input("You crossed the bridge and met a stranger. Do you want to talk (yes/no)? ")
 
+        print("----------")
         if answer == "yes":
-            print("...")
+            print("You talked to the stranger and got some gold. You WIN!")
         elif answer == "no":
-            print("...")
+            print("You ignored the stranger and he is offended, so you LOSS.")
         else:
             print("...")
 
@@ -39,3 +40,6 @@ elif answer == "right":
     
 else:
     print("Not a valid option, you lost.")
+
+print("##########")
+print("Thank you for trying, " + name + "!")
