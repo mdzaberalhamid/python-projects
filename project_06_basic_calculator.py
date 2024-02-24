@@ -6,8 +6,21 @@ def add(a, b):
     answer = a + b
     print(str(a) + " + " + str(b) + " = " + str(answer))
 
-add(1, 2)
-add(3, 6)
-add(9, 5)
+def sub(a, b):
+    answer = a - b
+    print(str(a) + " - " + str(b) + " = " + str(answer))
+
+def mul(a, b):
+    answer = a * b
+    print(str(a) + " * " + str(b) + " = " + str(answer))
+
+def div(a, b):
+    answer = a / b
+    print(str(a) + " / " + str(b) + " = " + str(answer))
+
+add(4, 3)
+sub(6, 1)
+mul(3, 3)
+div(8, 2)
 
 # Continuing...
