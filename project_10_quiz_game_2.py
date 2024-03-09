@@ -36,7 +36,11 @@ for key, value in quiz.items():
         print("Correct")
         score = score + 1
         print("Your score is " + str(score))
+        print("")
     else:
-        pass
+        print("Wrong!")
+        print("The answer is: " + value['answer'])
+        print("Your score is " + str(score))
+        print("")
 
 # Continuing...
