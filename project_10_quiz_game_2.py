@@ -21,6 +21,10 @@ quiz = {
     "question5":{
         "question":"What is the capital city of Russia?",
         "answer":"Moscow"
+    },
+    "question6":{
+        "question":"What is the capital city of Spain?",
+        "answer":"Madrid"
     }
 }
 
@@ -43,4 +47,6 @@ for key, value in quiz.items():
         print("Your score is " + str(score))
         print("")
 
-# Continuing...
+print("You got " + str(score) + " out of " + str(len(quiz)) + " qustions correctly!")
+print("Your percentage is " + str(int(score/len(quiz) *100)) + "% !")
+print("Thanks for playing the quiz!\n")
