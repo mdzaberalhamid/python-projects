@@ -28,6 +28,15 @@ def generate_password():
 
     print(password)
 
-generate_password()
+# generate_password()
+    
+option = input("Do you want to generate a password or not? (Yes/No): ").lower()
 
-# Continuing...
+if option == "yes":
+    generate_password()
+elif option == "no":
+    print("Program ended.")
+    quit()
+else:
+    print("Invalid input, please input Yes or No.")
+    quit()
