@@ -8,12 +8,14 @@
 
 import urllib.request as urllib
 
-print("This is a site connectivity checker program.")
-input_url = input("Input the url of the site you want to check: ")
-
 def main(url):
     print("Checking connectivity...")
     response = urllib.urlopen(url)
     print("Connected to", url, "succesfully!")
+    print("The response code was:", response.getcode())
 
-# Continuing...
+print("This is a site connectivity checker program.")
+input_url = input("Input the url of the site you want to check: ")
+# For example https://www.google.com
+
+main(input_url)
