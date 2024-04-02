@@ -12,12 +12,24 @@ from PIL import Image
 
 print('Image Resizer\n')
 
-image = Image.open('qrimg.png')
+def resize_image(size1, size2):
 
-print(f"Current image size: {image.size}")
+    image = Image.open('qrimg.png')
 
-resized_image = image.resize((500, 500))
+    print(f"Current image size: {image.size}")
 
-resized_image.save('qrimg-500.png')
+    resized_image = image.resize((size1, size2))
 
-# Continuing...
+    resized_image.save('qrimg-' + str(size1) + '.png')
+
+    print('\nNew resized image has been created.')
+
+    print(f"New image size: {resized_image.size}")
+
+size1 = int(input('Enter width: '))
+size2 = int(input('Enter height: '))
+
+resize_image(size1, size2)
+
+q = input('\nEnter any key to quit...')
+quit()
